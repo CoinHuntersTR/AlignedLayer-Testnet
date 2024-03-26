@@ -16,9 +16,10 @@ wget https://raw.githubusercontent.com/CoinHuntersTR/AlignedLayer-Testnet/main/g
 ## Run Node setup
 
 ```
-wget https://github.com/CoinHuntersTR/AlignedLayer-Testnet/blob/main/aligendlayer.sh
-chmod +x aligendlayer.sh
-./aligendlayer.sh -g yetanotherco -f aligne
+wget https://raw.githubusercontent.com/Staketab/cosmos-tools/main/node-installer/install.sh
+chmod +x install.sh
+./install.sh -g yetanotherco -f aligned_layer_tendermint -b alignedlayerd -c .alignedlayer -v v0.0.2
+rm -rf install.sh && . $HOME/.profile
 ```
 ## Data for start the chain
 
