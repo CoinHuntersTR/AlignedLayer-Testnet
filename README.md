@@ -23,6 +23,8 @@ rm -rf install.sh && . $HOME/.profile
 ```
 
 > Burada 2 seçeneğini seçip enter basıyoruz.
+
+
 ![Ekran görüntüsü 2024-03-26 233346](https://github.com/CoinHuntersTR/AlignedLayer-Testnet/assets/111747226/365e6a1a-f9f1-4bca-9f8d-0c590f6925c1)
 
 ## Data for start the chain
