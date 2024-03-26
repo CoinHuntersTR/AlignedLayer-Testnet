@@ -146,6 +146,10 @@ sudo journalctl -u alignedlayerd.service -f
 alignedlayerd keys add wallet
 ```
 
+## Faucet
+
+> Cüzdanınızı oluşturduktan sonra [BURADAN](https://faucet.alignedlayer.com/) faucete gidip cüzdanınıza token talep edin.
+
 > PubKeyimizi öğreniyoruz.
 
 >  `{"@type":"/cosmos.crypto.ed25519.PubKey","key":"keynumbersss"}` buna benzer bir çıktı alıyoruz.
