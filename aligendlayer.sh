@@ -1,6 +1,11 @@
 #!/bin/bash
 
-curl -s https://raw.githubusercontent.com/CoinHuntersTR/Andromeda-Testnet-Rehberi/main/logo.sh | bash
+curl -s https://raw.githubusercontent.com/Staketab/node-tools/main/logo.sh | bash
+
+RED="\033[31m"
+YELLOW="\033[33m"
+GREEN="\033[32m"
+NORMAL="\033[0m"
 
 function setup {
     gitname "${1}"
@@ -40,7 +45,7 @@ function line {
     echo "-------------------------------------------------------------------"
 }
 function param {
-    echo -e "$GREEN Add flags to$NORMAL $RED${BIN_NAME} start$NORMAL$GREEN command, if needed (Gerek duymuyorsanız enter ile geçin)$NORMAL"
+    echo -e "$GREEN Add flags to$NORMAL $RED${BIN_NAME} start$NORMAL$GREEN command, if needed (Example: --x-crisis-skip-assert-invariants)$NORMAL"
     line
     read -p "Flags: " FLAG
     export FLAG=${FLAG}
