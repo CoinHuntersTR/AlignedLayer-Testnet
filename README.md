@@ -1,4 +1,6 @@
 # AlignedLayer-Testnet
+
+## Go Setup
 ```
 sudo apt -q update
 sudo apt -qy install curl git jq lz4 build-essential
@@ -11,3 +13,5 @@ wget -q -O https://raw.githubusercontent.com/CoinHuntersTR/AlignedLayer-Testnet/
 ```
 . /etc/profile && . $HOME/.bashrc
 ```
+## Run Node setup
+
