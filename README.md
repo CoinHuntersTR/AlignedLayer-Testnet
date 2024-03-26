@@ -1,5 +1,7 @@
 # AlignedLayer-Testnet
 
+# Kurulum
+
 ## Go Setup
 ```
 sudo apt -q update
@@ -129,3 +131,65 @@ sudo journalctl -u alignedlayerd.service -f
 ```
 ## Aşağıdakine benzer çıktı alıyorsanız. İşlem tamamdır.
 ![Ekran görüntüsü 2024-03-26 234452](https://github.com/CoinHuntersTR/AlignedLayer-Testnet/assets/111747226/4d6e505f-697a-420a-acb3-02b22dd82fa8)
+
+# Validator Oluşturma
+
+> Öncelikle ağ ile senkronize olmanız gerekiyor. Yani Node'daki blok sayınız ile Ağdaki blok sayınız aynı olana kadar bekleyin.
+
+> Exlporerdan kontrol edebilirsiniz. [BURADAN](https://testnet.alignedlayer.explorers.guru/) explorer ulaşabilirsiniz.
+
+## Cüzdan Oluşturma
+
+> wallet yerine bir isim verin. Sonrasında sizden şifre isteyecek, istediğiniz bir şifre oluşturun. (Sonraki işlemlerde işinize yarayacağı için unutmayın)
+
+```
+alignedlayerd keys add wallet
+```
+
+> PubKeyimizi öğreniyoruz.
+
+>  `{"@type":"/cosmos.crypto.ed25519.PubKey","key":"keynumbersss"}` buna benzer bir çıktı alıyoruz.
+
+```
+alignedlayerd tendermint show-validator --home /root/.alignedlayer
+```
+
+```
+cd $HOME
+```
+```
+nano validator.json
+```
+
+> Aşağıdaki komutu kendinize göre düzenlemeniz gerekiyor.
+
+```
+{
+"pubkey": {"@type":"/cosmos.crypto.ed25519.PubKey","key":"keynumbersss"}, 
+"amount": "1000000stake",
+"moniker": "MONIKER",
+"identity": "KEY ID",
+"website": "",
+"security": "",
+"details": "",
+"commission-rate": "0.1",
+"commission-max-rate": "0.2",
+"commission-max-change-rate": "0.01",
+"min-self-delegation": "1"
+}
+```
+
+> Bunları düzenledikten sonra terminale kopyalayıp ekliyoruz. Sonrasında CTRL X Y enter ile çıkıyoruz.
+
+> Sonrasında aşağıdaki komutu çalıştırıyoruz.
+
+
+```
+sudo systemctl restart alignedlayerd.service
+```
+
+> wallet yerine kendi cüzdan adınızı girmeyi unutmayın.
+
+```
+alignedlayerd --home /root/.alignedlayer tx staking create-validator $HOME/validator.json --from wallet  --chain-id alignedlayer --fees 5000stake -y
+```
