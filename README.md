@@ -7,7 +7,7 @@ sudo apt -qy install curl git jq lz4 build-essential
 sudo apt -qy upgrade
 ```
 ```
-wget -q -O https://raw.githubusercontent.com/CoinHuntersTR/AlignedLayer-Testnet/main/go.sh && chmod +x go.sh && ./go.sh -v 1.22.0 && rm -rf go.sh
+wget https://raw.githubusercontent.com/CoinHuntersTR/AlignedLayer-Testnet/main/go.sh && chmod +x go.sh && ./go.sh -v 1.22.0 && rm -rf go.sh
 ```
 
 ```
@@ -16,7 +16,7 @@ wget -q -O https://raw.githubusercontent.com/CoinHuntersTR/AlignedLayer-Testnet/
 ## Run Node setup
 
 ```
-wget -q -O https://github.com/CoinHuntersTR/AlignedLayer-Testnet/blob/main/aligendlayer.sh
+wget https://github.com/CoinHuntersTR/AlignedLayer-Testnet/blob/main/aligendlayer.sh
 chmod +x aligendlayer.sh
 ./aligendlayer.sh -g yetanotherco -f aligne
 ```
