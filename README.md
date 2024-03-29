@@ -20,7 +20,7 @@ wget https://raw.githubusercontent.com/CoinHuntersTR/AlignedLayer-Testnet/main/g
 ```
 wget https://raw.githubusercontent.com/Staketab/cosmos-tools/main/node-installer/install.sh
 chmod +x install.sh
-./install.sh -g yetanotherco -f aligned_layer_tendermint -b alignedlayerd -c .alignedlayer -v v0.0.2
+./install.sh -g yetanotherco -f aligned_layer_tendermint -b alignedlayerd -c .alignedlayer -v v0.1.0
 rm -rf install.sh && . $HOME/.profile
 ```
 
